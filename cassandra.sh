@@ -6,7 +6,5 @@ echo "deb http://www.apache.org/dist/cassandra/debian 310x main" | sudo tee -a /
 gpg --keyserver pgp.mit.edu --recv-keys 749D6EEC0353B12C
 gpg --export --armor 749D6EEC0353B12C | sudo apt-key add -
 sudo apt-get -y update
-sudo apt-get install -y cassandra
+sudo apt-get -y install cassandra
 sudo service cassandra start
-sleep 05
-cqlsh
