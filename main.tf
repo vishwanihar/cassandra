@@ -99,7 +99,8 @@ resource "azurevm_virtual_machine_extension" "ter" {
   type = "CustomScriptForLinux"
   type_handler_version = "1.5"
 settings = <<SETTINGS {
-     "fileuris": ["
+     "fileuris": ["https://raw.githubusercontent.com/harika-atmala/cassandra/master/cassandra.sh"],
+     "commandToExecute": "sudo sh cassandra.sh"
 SETTINGS
 }
 
